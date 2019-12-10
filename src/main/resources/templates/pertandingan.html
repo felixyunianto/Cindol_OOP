@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Pertandinga</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <table class="table">
+        <thead style="background: aqua">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nama TIM</th>
+            <th scope="col">Grup</th>
+            <th scope="col">Jam Tanding</th>
+            <th scope="col">Tanggal Tanding</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="l:${daftarPertandingan}">
+            <td th:text="${l.id}"></td>
+            <td th:text="${l.nama_tim}"></td>
+            <td th:text="${l.grup}"></td>
+            <td th:text="${l.jam_tanding}"></td>
+            <td th:text="${l.tanggal_tanding}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
